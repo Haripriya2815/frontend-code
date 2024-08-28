@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calcuator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                 $('#btn1').click(function(){
+                    var num1 = $('#num1').val();
+                    var num2 = $('#num2').val();
+                    var add = parseInt(num1) + parseInt(num2);
+                    alert(add);
+                    $('#result').val(add);
+                });
+                $('#btn2').click(function(){
+                    var num1 = $('#num1').val();
+                    var num2 = $('#num2').val();
+                    var sub = num1 - num2;
+                    alert(sub);
+                    $('#result').val(sub);
+                });
+                $('#btn3').click(function(){
+                    var num1 = $('#num1').val();
+                    var num2 = $('#num2').val();
+                    var mul = num1 * num2;
+                    alert(mul);
+                    $('#result').val(mul);
+                });
+                $('#btn4').click(function(){
+                    var num1 = $('#num1').val();
+                    var num2 = $('#num2').val();
+                    var div = num1 / num2;
+                    alert(div);
+                    $('#result').val(div);
+                });
+            });
+
+        </script>
+        <style>
+          body {
+                background-color: gray;
+                text-align: center;
+          }
+          #num2{
+            margin-right: 28px;
+          }
+          #num1{
+            margin-right: 200px;
+          }
+          #btn1,#btn2,#btn3,#btn4 {
+            padding: 10px;
+            margin:15px;
+          }
+                     
+        </style>
+    </head>
+    <body>
+        
+        <h1>Calculate</h1>
+        <input type="number" value="num1" id="num1"><br><br>
+        <input type="number" id="num2">
+        <input type="number" id="result"><br><br>
+        <div class="container">
+        <button id="btn1">+</button>
+        <button id="btn2">-</button>
+        <button id="btn3">*</button>
+        <button id="btn4">/</button>
+        </div>   
+    </body>
+</html>
